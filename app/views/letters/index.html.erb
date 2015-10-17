@@ -14,13 +14,12 @@
   </thead>
 
   <tbody>
+    <tr>
+      <td>Front</td>
+    </tr>
     <% @letters.each do |letter| %>
       <% if letter.position == 'front' %>
         <tr>
-          <th>Front</th>
-        </tr>
-        <tr>
-          <!-- <td><%= letter.position %></td> -->
           <td><%= letter.name %></td>
           <td><%= letter.color %></td>
           <td><%= letter.number %></td>
@@ -28,12 +27,14 @@
           <td><%= link_to 'Edit', edit_letter_path(letter) %></td>
           <!-- <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
-      <% else %>
+      <% end %>
+    <% end %>
+    <tr>
+      <td>Back</td>
+    </tr>
+    <% @letters.each do |letter| %>
+      <% if letter.position == 'back' %>
         <tr>
-          <th>Back</th>
-        </tr>
-        <tr>
-          <!-- <td><%= letter.position %></td> -->
           <td><%= letter.name %></td>
           <td><%= letter.color %></td>
           <td><%= letter.number %></td>
