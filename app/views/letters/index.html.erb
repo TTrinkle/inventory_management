@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Letter Inventory</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Letter</th>
+      <th>Color</th>
+      <th>Count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @letters.each do |letter| %>
+      <% if letter.position == 'front' %>
+        <tr>
+          <th>Front</th>
+        </tr>
+        <tr>
+          <!-- <td><%= letter.position %></td> -->
+          <td><%= letter.name %></td>
+          <td><%= letter.color %></td>
+          <td><%= letter.number %></td>
+          <!-- <td><%= link_to 'Show', letter %></td> -->
+          <td><%= link_to 'Edit', edit_letter_path(letter) %></td>
+          <!-- <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        </tr>
+      <% else %>
+        <tr>
+          <th>Back</th>
+        </tr>
+        <tr>
+          <!-- <td><%= letter.position %></td> -->
+          <td><%= letter.name %></td>
+          <td><%= letter.color %></td>
+          <td><%= letter.number %></td>
+          <!-- <td><%= link_to 'Show', letter %></td> -->
+          <td><%= link_to 'Edit', edit_letter_path(letter) %></td>
+          <!-- <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Letter', new_letter_path %>
