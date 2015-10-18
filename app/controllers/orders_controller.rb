@@ -24,16 +24,13 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    p '&&&&&&&&&&&&&&&&&&&'
-    p params
-    p '&&&&&&&&&&&&&&&&&&&'
     @order = Order.new(order_params)
     letter_1 = Letter.where(position: 'front', name: order_params[:letter_1], color: order_params[:top_color]).first.remove_one
     letter_2 = Letter.where(position: 'front', name: order_params[:letter_2], color: order_params[:top_color]).first.remove_one
     letter_3 = Letter.where(position: 'front', name: order_params[:letter_3], color: order_params[:top_color]).first.remove_one
-    letter_4 = Letter.where(position: 'back', name: order_params[:letter_1], color: order_params[:bottom_color])
-    letter_5 = Letter.where(position: 'back', name: order_params[:letter_2], color: order_params[:bottom_color])
-    letter_6 = Letter.where(position: 'back', name: order_params[:letter_3], color: order_params[:bottom_color])
+    letter_4 = Letter.where(position: 'back', name: order_params[:letter_1], color: order_params[:bottom_color]).first.remove_one
+    letter_5 = Letter.where(position: 'back', name: order_params[:letter_2], color: order_params[:bottom_color]).first.remove_one
+    letter_6 = Letter.where(position: 'back', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
 
     p '**********************'
     p @letter_1

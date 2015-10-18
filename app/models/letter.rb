@@ -5,4 +5,9 @@ class Letter < ActiveRecord::Base
 		self.save
 	end
 
+	def add_set
+		self.number += 10
+		self.save
+	end
+	
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clothes
   resources :orders
   devise_for :users
   resources :letters
