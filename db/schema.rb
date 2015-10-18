@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20151018035237) do
     t.string   "shirt_type"
     t.string   "top_color"
     t.string   "bottom_color"
+    t.string   "shirt_size"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

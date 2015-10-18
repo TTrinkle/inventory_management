@@ -2,7 +2,6 @@
   <% if @order.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
-
       <ul>
       <% @order.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -16,12 +15,28 @@
     <%= f.collection_select(:shirt_type, Article::SHIRT_TYPES, :to_s, :to_s) %>
   </div>
   <div class="field">
+    <%= f.label :shirt_size %><br>
+    <%= f.collection_select(:shirt_size, Article::SHIRT_SIZES, :to_s, :to_s) %>
+  </div>
+  <div class="field">
     <%= f.label :letter_1 %><br>
-    <%= f.text_field :letter_1 %>
+    <%= f.collection_select(:letter_1, Article::LETTER_OPTIONS, :to_s, :to_s) %>
+  </div>
+  <div class="field">
+    <%= f.label :letter_2 %><br>
+    <%= f.collection_select(:letter_2, Article::LETTER_OPTIONS, :to_s, :to_s) %>
+  </div>
+  <div class="field">
+    <%= f.label :letter_3 %><br>
+    <%= f.collection_select(:letter_3, Article::LETTER_OPTIONS, :to_s, :to_s) %>
   </div>
   <div class="field">
     <%= f.label :top_color %><br>
     <%= f.text_field :top_color %>
+  </div>
+  <div class="field">
+    <%= f.label :bottom_color %><br>
+    <%= f.text_field :bottom_color %>
   </div>
 
   <div class="actions">

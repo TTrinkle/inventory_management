@@ -1,4 +1,25 @@
 <p id="notice"><%= notice %></p>
+<p>
+  <strong>Letter 1:</strong>
+  <%= @order.letter_1 %>
+</p>
+<p>
+  <strong>Letter 2:</strong>
+  <%= @order.letter_2 %>
+</p>
+<p>
+  <strong>Letter 3:</strong>
+  <%= @order.letter_3 %>
+</p>
 
+<p>
+  <strong>Top Color:</strong>
+  <%= @order.top_color %>
+</p>
+
+<p>
+  <strong>Bottom Color:</strong>
+  <%= @order.bottom_color %>
+</p>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>

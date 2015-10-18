@@ -24,8 +24,20 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    p '&&&&&&&&&&&&&&&&&&&'
+    p params
+    p '&&&&&&&&&&&&&&&&&&&'
     @order = Order.new(order_params)
+    letter_1 = Letter.where(position: 'front', name: order_params[:letter_1], color: order_params[:top_color]).first.remove_one
+    letter_2 = Letter.where(position: 'front', name: order_params[:letter_2], color: order_params[:top_color]).first.remove_one
+    letter_3 = Letter.where(position: 'front', name: order_params[:letter_3], color: order_params[:top_color]).first.remove_one
+    letter_4 = Letter.where(position: 'back', name: order_params[:letter_1], color: order_params[:bottom_color])
+    letter_5 = Letter.where(position: 'back', name: order_params[:letter_2], color: order_params[:bottom_color])
+    letter_6 = Letter.where(position: 'back', name: order_params[:letter_3], color: order_params[:bottom_color])
 
+    p '**********************'
+    p @letter_1
+    p '**********************'
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
@@ -69,6 +81,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params[:order]
+      params.require(:order).permit(:letter_1, :letter_2, :letter_3, :top_color, :bottom_color, :shirt_size, :shirt_type)
     end
 end
