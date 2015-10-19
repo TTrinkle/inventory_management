@@ -5,10 +5,10 @@
 <table class='table'>
   <thead>
     <tr>
-      <th>Type</th>
       <th>Letter</th>
       <th>Color</th>
       <th>Count</th>
+      <th>Edit</th>
       <th>Delete</th>
       <th>Add Set</th>
       <th colspan="3"></th>
@@ -27,8 +27,16 @@
             <i class='glyphicon glyphicon-pencil'></i>
             <% end %>
           </td>
-          <td><%= link_to 'Destroy', letter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <td><%= link_to 'Add Set', letter, method: :add_set, data: {confirm: "Are you sure we ordered this?"} %></td>
+          <td>
+            <%= link_to letter, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' do %>
+              <i class='glyphicon glyphicon-remove'></i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to letter, method: :add_set, data: {confirm: "Are you sure we ordered this?"}, class: 'btn btn-default' do %>
+              <i class='glyphicon glyphicon-plus'></i>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     <% end %>
