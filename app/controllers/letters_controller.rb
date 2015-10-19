@@ -51,6 +51,17 @@ class LettersController < ApplicationController
     end
   end
 
+  def add_set
+    p params
+    letter = Letter.find(params[:id])
+    letter.add_set
+    letter.save
+    respond_to do |format|
+      format.html { redirect_to letters_url, notice: 'Letter was successfully updated.' }
+      format.json { head :no_content }
+    end
+  end
+
   # DELETE /letters/1
   # DELETE /letters/1.json
   def destroy

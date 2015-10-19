@@ -11,6 +11,22 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :item_type %><br>
+    <%= f.collection_select(:item_type, Article::SHIRT_TYPES, :to_s, :to_s) %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.collection_select(:size, Article::SHIRT_SIZES, :to_s, :to_s, include_blank: :true) %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+   <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -24,8 +24,14 @@
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-<a class='btn btn-default' href='<%= new_letter_path %>'>New Letter</a>
-<a class='btn btn-default' href=' <%= new_order_path %>'>New Order</a>
+<a class='btn purple_btn' href='<%= new_letter_path %>'>New Letter</a>
+<a class='btn purple_btn' href=' <%= new_order_path %>'>New Order</a>
+<a class='btn purple_btn' href=' <%= new_item_path %>'>New Item</a>
+<a class='btn gold_btn' href=' <%= items_path %>'>See Item Inventory</a>
+<a class='btn gold_btn' href=' <%= orders_path %>'>See Orders</a>
+<a class='btn gold_btn' href=' <%= letters_path %>'>See Letters Inventory</a>
+
+
 <%= yield %>
 
 </body>

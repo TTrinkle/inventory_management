@@ -71,3 +71,25 @@ div {
     list-style: square;
   }
 }
+
+.purple_btn{
+  background-color: #520052;
+  color: #FFF;
+  a{
+    color: #FFF;
+  }
+}
+.purple_btn:visited{
+  color: #FFF;
+}
+
+.gold_btn{
+  background-color: #DBB84D;
+  color: #FFF;
+}
+.gold_btn:visited{
+  color: #FFF;
+}
+.title{
+  clear: both;
+}

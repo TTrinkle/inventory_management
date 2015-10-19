@@ -32,9 +32,7 @@ class OrdersController < ApplicationController
     letter_5 = Letter.where(position: 'back', name: order_params[:letter_2], color: order_params[:bottom_color]).first.remove_one
     letter_6 = Letter.where(position: 'back', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
 
-    p '**********************'
-    p @letter_1
-    p '**********************'
+  
     respond_to do |format|
       if @order.save
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
