@@ -24,15 +24,23 @@ class LettersController < ApplicationController
   # POST /letters
   # POST /letters.json
   def create
-    @letter = Letter.new(letter_params)
+    p letter_params
+    if Letter.where(color: letter_params[:color], position: letter_params[:position], name: letter_params[:name]).length > 0 
+      respond_to do |format|
+        format.html { redirect_to letters_url, alert: 'Letter already exists.' }
+        format.json { head :no_content }
+      end
+    else
+      @letter = Letter.new(letter_params)
 
-    respond_to do |format|
-      if @letter.save
-        format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
-        format.json { render :show, status: :created, location: @letter }
-      else
-        format.html { render :new }
-        format.json { render json: @letter.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @letter.save
+          format.html { redirect_to @letter, notice: 'Letter was successfully created.' }
+          format.json { render :show, status: :created, location: @letter }
+        else
+          format.html { render :new }
+          format.json { render json: @letter.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
