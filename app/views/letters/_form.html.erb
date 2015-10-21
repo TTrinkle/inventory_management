@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.collection_select(:letter_1, Article::LETTER_OPTIONS, :to_s, :to_s) %>
+    <%= f.collection_select(:name, Article::LETTER_OPTIONS, :to_s, :to_s) %>
   </div>
   <div class="field">
     <%= f.label :color %><br>
