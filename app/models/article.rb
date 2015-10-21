@@ -23,8 +23,9 @@ class Article < ActiveRecord::Base
 		'sigma',
 		'tau',
 		'upsilon',
-		'chi',
 		'phi',
+		'chi',
+		'psi',
 		'omega',
 	]
 
