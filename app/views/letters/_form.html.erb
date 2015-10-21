@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :position %><br>
-    <%= f.collection_select(:position, Article::POSITION_OPTIONS :to_s, :to_s) %>
+    <%= f.collection_select(:position, Article::POSITION_OPTIONS, :to_s, :to_s) %>
   </div>
   <div class="actions">
     <%= f.submit %>
