@@ -4,7 +4,9 @@ class LettersController < ApplicationController
   # GET /letters
   # GET /letters.json
   def index
-    @letters = Letter.order(:position, :number)
+    top_letters = Letter.where(position: 'top').order(:name, :number)
+    bottom_letters = Letter.where(position: 'bottom').order(:name, :number)
+    @letters = {top_letters: top_letters, bottom_letters: bottom_letters}
   end
 
   # GET /letters/1
