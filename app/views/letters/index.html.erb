@@ -9,19 +9,23 @@
       Top Letters
     </tr>
     <tr>
+      <th>Add Set</th>
       <th>Letter</th>
       <th>Color</th>
       <th>Count</th>
       <th>Edit</th>
       <th>Delete</th>
-      <th>Add Set</th>
       <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
     <% @letters[:top_letters].each do |letter| %>
         <tr>
-          
+          <td>
+            <%= link_to letter, method: :add_set, class: 'btn btn-default' do %>
+              <i class='glyphicon glyphicon-plus'></i>
+            <% end %>
+          </td>
           <td><%= letter.name %></td>
           <td><%= letter.color %></td>
           <td><%= letter.number %></td>
@@ -37,6 +41,46 @@
         </tr>
     <% end %>
   </tbody>
-</table>
 
+</table>
+<table class='table'>
+  <thead>
+    <tr>
+      Bottom Letters
+    </tr>
+    <tr>
+      <th>Add Set</th>
+      <th>Letter</th>
+      <th>Color</th>
+      <th>Count</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @letters[:bottom_letters].each do |letter| %>
+        <tr>
+          <td>
+            <%= link_to letter, method: :add_set, class: 'btn btn-default' do %>
+              <i class='glyphicon glyphicon-plus'></i>
+            <% end %>
+          </td>
+          <td><%= letter.name %></td>
+          <td><%= letter.color %></td>
+          <td><%= letter.number %></td>
+          <td><%= link_to edit_letter_path(letter), class: 'btn btn-default' do %>
+            <i class='glyphicon glyphicon-pencil'></i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to letter, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' do %>
+              <i class='glyphicon glyphicon-remove'></i>
+            <% end %>
+          </td>
+        </tr>
+    <% end %>
+  </tbody>
+  
+</table>
 
