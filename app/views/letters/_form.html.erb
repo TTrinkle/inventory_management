@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :number %><br>
-    <%= f.number_field :number %>
+    <%= f.collection_select(:letter_1, Article::LETTER_OPTIONS, :to_s, :to_s) %>
   </div>
   <div class="field">
     <%= f.label :color %><br>
     <%= f.text_field :color %>
   </div>
   <div class="field">
+    <%= f.label :number %><br>
+    <%= f.number_field :number %>
+  </div>
+  <div class="field">
     <%= f.label :position %><br>
-    <%= f.text_field :position %>
+    <%= f.collection_select(:position, Article::POSITION_TYPES, :to_s, :to_s) %>
   </div>
   <div class="actions">
     <%= f.submit %>

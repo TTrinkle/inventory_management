@@ -27,4 +27,6 @@ class Article < ActiveRecord::Base
 		'phi',
 		'omega',
 	]
+
+	POSITION_OPTIONS = ['top', 'bottom']
 end
