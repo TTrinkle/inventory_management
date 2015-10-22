@@ -25,12 +25,12 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-    letter_1 = Letter.where(position: 'front', name: order_params[:letter_1], color: order_params[:top_color]).first.remove_one
-    letter_2 = Letter.where(position: 'front', name: order_params[:letter_2], color: order_params[:top_color]).first.remove_one
-    letter_3 = Letter.where(position: 'front', name: order_params[:letter_3], color: order_params[:top_color]).first.remove_one
-    letter_4 = Letter.where(position: 'back', name: order_params[:letter_1], color: order_params[:bottom_color]).first.remove_one
-    letter_5 = Letter.where(position: 'back', name: order_params[:letter_2], color: order_params[:bottom_color]).first.remove_one
-    letter_6 = Letter.where(position: 'back', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
+    letter_1 = Letter.where(position: 'top', name: order_params[:letter_1], color: order_params[:top_color]).first.remove_one
+    letter_2 = Letter.where(position: 'top', name: order_params[:letter_2], color: order_params[:top_color]).first.remove_one
+    letter_3 = Letter.where(position: 'top', name: order_params[:letter_3], color: order_params[:top_color]).first.remove_one
+    letter_4 = Letter.where(position: 'bottom', name: order_params[:letter_1], color: order_params[:bottom_color]).first.remove_one
+    letter_5 = Letter.where(position: 'bottom', name: order_params[:letter_2], color: order_params[:bottom_color]).first.remove_one
+    letter_6 = Letter.where(position: 'bottom', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
 
   
     respond_to do |format|
