@@ -33,7 +33,7 @@ class OrdersController < ApplicationController
     letter_6 = Letter.where(position: 'bottom', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
 
     if Item.where(item_type: :shirt_type, color: :shirt_color, size: :size)
-      item = Item.where(item_type: :shirt_type, color: :shirt_color, size: :size)
+      item = Item.where(item_type: params[:shirt_type], color: params[:shirt_color], size: params[:size])
       item.count -= 1
       item.save
     else
