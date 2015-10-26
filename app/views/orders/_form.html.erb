@@ -19,6 +19,10 @@
     <%= f.collection_select(:shirt_size, Article::SHIRT_SIZES, :to_s, :to_s) %>
   </div>
   <div class="field">
+    <%= f.label :shirt_color %><br>
+    <%= f.text_field :shirt_color %>
+  </div>
+  <div class="field">
     <%= f.label :letter_1 %><br>
     <%= f.collection_select(:letter_1, Article::LETTER_OPTIONS, :to_s, :to_s) %>
   </div>

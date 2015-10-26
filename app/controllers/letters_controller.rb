@@ -34,7 +34,7 @@ class LettersController < ApplicationController
       end
     else
       @letter = Letter.new(letter_params)
-
+      @letter.user_id = current_user.id
       respond_to do |format|
         if @letter.save
           format.html { redirect_to @letter, notice: 'Letter was successfully created.' }

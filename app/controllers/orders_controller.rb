@@ -32,6 +32,16 @@ class OrdersController < ApplicationController
     letter_5 = Letter.where(position: 'bottom', name: order_params[:letter_2], color: order_params[:bottom_color]).first.remove_one
     letter_6 = Letter.where(position: 'bottom', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
 
+    if Item.where(item_type: :shirt_type, color: :shirt_color, size: :size)
+      item = Item.where(item_type: :shirt_type, color: :shirt_color, size: :size)
+      item.count -= 1
+      item.save
+    else
+      new_item = Item.create(item_type: :shirt_type, color: :shirt_color, size: :size, user_id: current_user.id)
+      new_item.count -= 1
+      new_item.save
+    end
+
   
     respond_to do |format|
       if @order.save
@@ -76,6 +86,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:letter_1, :letter_2, :letter_3, :top_color, :bottom_color, :shirt_size, :shirt_type)
+      params.require(:order).permit(:letter_1, :letter_2, :letter_3, :top_color, :bottom_color, :shirt_size, :shirt_type, :shirt_color)
     end
 end
