@@ -1,108 +1,262 @@
-body {
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+$dark-purple: #230617;
+$light-purple: #A36A83;
+$green: #ABD96F;
+$pink: #D9BFBF;
+$blue: #CCE0DD;
+
+// body {
+//   color: #333;
+//   font-family: verdana, arial, helvetica, sans-serif;
+//   font-size: 13px;
+//   line-height: 18px;
+// }
+
+// p, ol, ul, td {
+//   font-family: verdana, arial, helvetica, sans-serif;
+//   font-size: 13px;
+//   line-height: 18px;
+// }
+
+// pre {
+//   background-color: #eee;
+//   padding: 10px;
+//   font-size: 11px;
+// }
+
+// a {
+//   color: #000;
+
+//   &:visited {
+//     color: #666;
+//   }
+
+//   &:hover {
+//     color: #fff;
+//     background-color: #000;
+//   }
+// }
+
+// div {
+//   &.field, &.actions {
+//     margin-bottom: 10px;
+//   }
+// }
+// .table{
+//   width: 60% !important;
+// }
+
+// #notice {
+//   color: green;
+// }
+
+// #error {
+//   color: red;
+// }
+
+// .field_with_errors {
+//   padding: 2px;
+//   background-color: red;
+//   display: table;
+// }
+
+// #error_explanation {
+//   width: 450px;
+//   border: 2px solid red;
+//   padding: 7px;
+//   padding-bottom: 0;
+//   margin-bottom: 20px;
+//   background-color: #f0f0f0;
+
+//   h2 {
+//     text-align: left;
+//     font-weight: bold;
+//     padding: 5px 5px 5px 15px;
+//     font-size: 12px;
+//     margin: -7px;
+//     margin-bottom: 0px;
+//     background-color: #c00;
+//     color: #fff;
+//   }
+
+//   ul li {
+//     font-size: 12px;
+//     list-style: square;
+//   }
+// }
+
+// .purple_btn{
+//   background-color: #520052;
+//   color: #FFF;
+//   a{
+//     color: #FFF;
+//   }
+// }
+// .purple_btn:visited{
+//   color: #FFF;
+// }
+
+// .gold_btn{
+//   background-color: #DBB84D;
+//   color: #FFF;
+// }
+// .gold_btn:visited{
+//   color: #FFF;
+// }
+// .title{
+//   clear: both;
+// }
+// .new_letter{
+//   form{
+//     label{
+//       color: blue;
+//     }
+//   }
+// }
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+h1 {
+  font-family:"Arvo";
+  font-weight:normal;
+  font-size: 55px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+h2 {
+  font-family:"Arvo";
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+h3 {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px 0;
+  padding: 0;
+  z-index: 1;
+  position: relative;
 }
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+.center { margin: 0 auto; }
+.content{ margin: 0 auto; width: 960px; }
+.clear { clear: both; }
+
+#header {
+  width: 100%;
+  background: url('../../assets/images/pi.jpg');
+  height: 80px;
+  position: fixed;
+  background-color: $dark-purple;
+  color: white;
+  z-index: 5;
 }
-.table{
-  width: 60% !important;
+#nav { width: 410px; float: right; margin-top: 20px; }
+#logo a { 
+  color: #fff; 
+  text-decoration: none; 
+  float: left; 
+  font-size: 30px; 
+  margin-top: 20px; 
+  font-family:"Wellfleet"; 
+  font-weight: bold;
+  opacity: 0.8;
+}
+#nav ul{
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  list-style: none;
 }
 
-#notice {
-  color: green;
+#nav li{
+  margin-top: 9px;
+  float: left;
+  padding-left: 21px;
 }
 
-#error {
-  color: red;
+#nav li a { 
+  color: white; 
+  opacity:0.6; 
+  font-size: 16px; 
+  text-decoration: none; 
+  font-family: 'Wellfleet'; 
+}
+#nav li a.active { color: #fff; opacity:1; border-bottom: 2px solid #fff; }
+#nav li a:hover { color: #fff; opacity:1;  }
+
+.quotes {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-weight: normal;
+  font-size: 30px;
+  text-align: left;
+  margin: 50px auto;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+.author_name_white { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #fff; font-size: 20px; }
+.author_name_gray { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; }
+.quotes_container { width: 800px; margin: 0 auto; }
+#christmas_tree { background: url('../images/lambda.jpg')no-repeat; width: 48px; height: 77px; margin: 0 auto; position: relative; bottom: -35px;}
+#divider { background: url('../images/chi.jpg')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
+#ribbon { background: url('../images/kappa.jpg')no-repeat; width: 251px; height: 48px; margin: 0 auto;  display: block; position: relative; top: -38px; }
+#snowflakes1 { background: url('../images/mu.jpg')no-repeat; width: 24px; height: 21px; margin: 0 auto;  display: block; position: relative; bottom: -54px; left: -102px; }
+#snowflakes2 { background: url('../images/sigma.jpg')no-repeat; width: 24px; height: 21px; margin: 0 auto;  display: block; position: relative; bottom: -33px;  right: -100px; }
+
+#slide1, #slide2{ width: 100%; }
+#slide1{
+  background-color: $dark-purple;
+  color: #fff;
+  height: 600px;
+  margin: 0;
+  padding: 200px 0 260px 0;
+  background-size: cover;
 }
 
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
+#slide2{
+  background-color: $light-purple;
+  color: #333333;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 200px 0;
 }
 
-.purple_btn{
-  background-color: #520052;
-  color: #FFF;
-  a{
-    color: #FFF;
-  }
-}
-.purple_btn:visited{
-  color: #FFF;
+#slide3{
+  // background: url(../images/eta.jpg) 50% 0 no-repeat fixed;
+  background-color: $green;
+  color: #fff;
+  height: 600px;
+  padding: 170px 0 0 0;
+  background-size: cover;
 }
 
-.gold_btn{
-  background-color: #DBB84D;
-  color: #FFF;
+#slide4{
+  background-color: $pink;
+  color: #333333;
+  height: 300px;
+  padding: 200px 0;
 }
-.gold_btn:visited{
-  color: #FFF;
+
+#slide5{
+  // background: url(tau.jpg) 50% 0 no-repeat fixed;
+  background-color: $blue;
+  height: 200px;
+  margin: 0 auto;
+  padding: 250px 0;
+  color: #fff;
+  background-size: cover;
 }
-.title{
-  clear: both;
-}
-.new_letter{
-  form{
-    label{
-      color: blue;
-    }
-  }
-}
+#copyright  { color: #fff; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
+#copyright  a { text-decoration: none; color: #fff;  }

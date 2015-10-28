@@ -7,8 +7,74 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="script/javascript" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+  <link rel="stylesheet" href="css/style.css"/>
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
+
+  <header id="header">
+    <div>
+      <div id="logo"><a href=""> PARALLAX </a></div>
+      <nav id="nav">
+        <ul>
+        <li><a href="#slide1" title="Next Section" >Slide 1</a>
+        </li>
+        <li><a href="#slide2" title="Next Section">Slide 2</a></li>
+        <li><a href="#slide3" title="Next Section">Slide 3</a></li>
+        <li><a  href="#slide4" title="Next Section">Slide 4</a></li>
+        <li><a href="#slide5" title="Next Section">Slide 5</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="slide1">
+    <div>
+      <h3><a href="<%= letters_path %>">See Letter Inventory</a></h3>
+    </div>
+  </div>
+
+  <div id="slide2">
+    <div>
+      <div>
+        <h3><a href="<%= new_letter_path %>">Add a new Letter</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="slide3">
+    <div>
+      <div>
+        <h3><a href="<%= items_path %>">See Item Inventory</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="slide4">
+    <div>
+      <div>
+        <h3><a href="<%= new_item_path %>">Add New Item</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="slide5">
+    <div>
+      <div>
+        <h3><a href="<%= new_order_path %>">Add New Order</a></h3>
+      </div>
+    </div>
+  </div>
+
+
+<!-- 
+
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
@@ -40,7 +106,7 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 
 
