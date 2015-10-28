@@ -216,7 +216,9 @@ h3 {
 
 #slide1, #slide2{ width: 100%; }
 #slide1{
-  background-color: $dark-purple;
+  background: url(clothing.jpg) 50% 0 no-repeat fixed;
+  opacity: 0.4;
+  // background-color: $dark-purple;
   color: #fff;
   height: 600px;
   margin: 0;
@@ -235,6 +237,8 @@ h3 {
 
 #slide3{
   // background: url(../images/eta.jpg) 50% 0 no-repeat fixed;
+  opacity: 0.4;
+  background: url(store.jpeg) 50% 0 no-repeat fixed;
   background-color: $green;
   color: #fff;
   height: 600px;
