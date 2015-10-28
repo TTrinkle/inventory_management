@@ -1,0 +1,308 @@
+/* line 5, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/letters.scss */
+.top-letters {
+  display: none;
+}
+
+/* line 9, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/letters.scss */
+.bottom-letters {
+  display: none;
+}
+/* line 116, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 122, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+h1 {
+  font-family: "Arvo";
+  font-weight: normal;
+  font-size: 55px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 132, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+h2 {
+  font-family: "Arvo";
+  font-weight: normal;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 142, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+h3 {
+  font-family: "Oswald";
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  margin: 5px 0;
+  padding: 0;
+  z-index: 1;
+  position: relative;
+}
+
+/* line 153, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.center {
+  margin: 0 auto;
+}
+
+/* line 154, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.content {
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* line 155, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.clear {
+  clear: both;
+}
+
+/* line 157, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#header {
+  width: 100%;
+  background: url("../../assets/images/pi.jpg");
+  height: 80px;
+  position: fixed;
+  background-color: #230617;
+  color: white;
+  z-index: 5;
+}
+
+/* line 166, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#nav {
+  width: 500px;
+  float: right;
+  margin-top: 20px;
+}
+
+/* line 171, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#logo a {
+  color: #fff;
+  text-decoration: none;
+  float: left;
+  font-size: 30px;
+  margin-top: 20px;
+  font-family: "Wellfleet";
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+/* line 181, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#nav ul {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  list-style: none;
+}
+
+/* line 188, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#nav li {
+  margin-top: 9px;
+  float: left;
+  padding-left: 21px;
+}
+
+/* line 194, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#nav li a {
+  color: white;
+  opacity: 0.6;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Wellfleet';
+}
+
+/* line 201, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#nav li a.active {
+  color: #fff;
+  opacity: 1;
+  border-bottom: 2px solid #fff;
+}
+
+/* line 202, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#nav li a:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+/* line 204, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.quotes {
+  font-family: 'Goudy Bookletter 1911', serif;
+  font-weight: normal;
+  font-size: 30px;
+  text-align: left;
+  margin: 50px auto;
+}
+
+/* line 212, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.author_name_white {
+  font-family: "Wellfleet";
+  margin: 70px 0 0 75px;
+  color: #fff;
+  font-size: 20px;
+}
+
+/* line 213, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.author_name_gray {
+  font-family: "Wellfleet";
+  margin: 70px 0 0 75px;
+  color: #94a4a4;
+  font-size: 20px;
+}
+
+/* line 214, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+.quotes_container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* line 215, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#christmas_tree {
+  background: url("../images/lambda.jpg") no-repeat;
+  width: 48px;
+  height: 77px;
+  margin: 0 auto;
+  position: relative;
+  bottom: -35px;
+}
+
+/* line 216, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#divider {
+  background: url("../images/chi.jpg") no-repeat;
+  width: 300px;
+  height: 35px;
+  margin: 0px auto 27px auto;
+}
+
+/* line 217, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#ribbon {
+  background: url("../images/kappa.jpg") no-repeat;
+  width: 251px;
+  height: 48px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: -38px;
+}
+
+/* line 218, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#snowflakes1 {
+  background: url("../images/mu.jpg") no-repeat;
+  width: 24px;
+  height: 21px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  bottom: -54px;
+  left: -102px;
+}
+
+/* line 219, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#snowflakes2 {
+  background: url("../images/sigma.jpg") no-repeat;
+  width: 24px;
+  height: 21px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  bottom: -33px;
+  right: -100px;
+}
+
+/* line 221, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide1, #slide2 {
+  width: 100%;
+}
+
+/* line 222, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide1 {
+  background: url('<%= asset_path("logo.png") %> ') 50% 0 no-repeat fixed;
+  opacity: 0.4;
+  color: #fff;
+  height: 600px;
+  margin: 0;
+  padding: 200px 0 260px 0;
+  background-size: cover;
+}
+/* line 231, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide1 h3 a {
+  color: blue;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* line 239, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide2 {
+  background-color: #A36A83;
+  color: #333333;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 200px 0;
+}
+
+/* line 248, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide3 {
+  opacity: 0.4;
+  background: url(store.jpeg) 50% 0 no-repeat fixed;
+  background-color: #ABD96F;
+  color: #fff;
+  height: 600px;
+  padding: 170px 0 0 0;
+  background-size: cover;
+}
+
+/* line 259, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide4 {
+  background-color: #D9BFBF;
+  color: #333333;
+  height: 600px;
+  padding: 200px 0;
+}
+
+/* line 266, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#slide5 {
+  background-color: #CCE0DD;
+  height: 600px;
+  margin: 0 auto;
+  padding: 250px 0;
+  color: #fff;
+  background-size: cover;
+}
+
+/* line 275, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#copyright {
+  color: #fff;
+  font-family: "Wellfleet";
+  font-size: 14px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* line 276, /Users/tanyatrinkle/Desktop/Inventory/app/assets/stylesheets/scaffolds.scss */
+#copyright a {
+  text-decoration: none;
+  color: #fff;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
