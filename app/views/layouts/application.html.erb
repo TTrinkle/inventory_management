@@ -19,7 +19,6 @@
 </head>
 <body>
 
-<!-- 
 
 <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
@@ -27,6 +26,7 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
+<% if current_user %>
 <nav class='navbar navbar-default'>
   <div class='container-fluid'>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -52,9 +52,8 @@
       </ul>
     </div>
   </div>
-</nav> -->
-
-
+</nav>
+<% end %>
 
 
 <%= yield %>
