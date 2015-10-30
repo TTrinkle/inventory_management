@@ -240,7 +240,7 @@ h3 {
 #slide2{
   background-color: $light-purple;
   color: #333333;
-  height: 600px;
+  height: 300px;
   margin: 0 auto;
   overflow: hidden;
   padding: 200px 0;
@@ -275,3 +275,69 @@ h3 {
 }
 #copyright  { color: #fff; font-family:"Wellfleet";  font-size: 14px; margin-top: 100px; text-align: center;  }
 #copyright  a { text-decoration: none; color: #fff;  }
+
+#slide2-half{
+  display: none;
+  position: relative;
+  color: #333333;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 130px 0;
+}
+.letters-list{
+  position: relative;
+  width: 100%;
+  ul{
+    list-style-type: none;
+    padding: 0;
+    li{
+      height: 89px;
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+  .row{
+    margin-top: 28px;
+  }
+}
+.letters1{
+  // display: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+}
+.letters2{
+  // display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+.letters3{
+  // display: none;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.new-letter-cta{
+  img{
+    display: inherit;
+    margin: 0 auto;
+    height: 72px;
+  }
+}
+.right-arrow, .right-arrow-2{
+  height: 46px;
+  position: absolute;
+  top: 47%;
+  right: 2%;
+}
+.left-arrow, .left-arrow-2{
+  height: 46px;
+  position: absolute;
+  top: 47%;
+  left: 2%;
+}

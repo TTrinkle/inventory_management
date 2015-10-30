@@ -1,0 +1,104 @@
+  <header id="header">
+    <div>
+      <div id="logo"><a href=""> UniQue Greek Online Apparel </a></div>
+      <nav id="nav">
+        <ul>
+        <li><a href="#slide1" title="Next Section" >All Letters</a>
+        </li>
+        <li><a href="#slide2" title="Next Section">+ Letter</a></li>
+        <li><a href="#slide3" title="Next Section">All Items</a></li>
+        <li><a  href="#slide4" title="Next Section">+ Item</a></li>
+        <li><a href="#slide5" title="Next Section">Orders</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div id="slide1">
+    <div>
+      <h3><a href="<%= letters_path %>">See Letter Inventory</a></h3>
+    </div>
+  </div>
+
+  <div id="slide2">
+    <div>
+      <div>
+        <h3><a href="<%= new_letter_path %>">Add a new Letter</a></h3>
+      </div>
+      <div class='new-letter-cta'>
+        <img src="/assets/downarrow.png">
+      </div>
+    </div>
+  </div>
+  <div id='slide2-half'>
+    <div class='letters-list letters1 container-fluid'>
+      <div class='row'>
+        <ul>
+          <li class='col-md-3'><a href=""><img src="/assets/alpha.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/beta.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/gamma.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/delta.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/epsilon.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/zeta.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/eta.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/theta.jpg"></a></li>
+        </ul>
+        <img class='right-arrow' src="/assets/rightarrow.png">
+      </div>
+    </div>
+    <div class='letters-list letters2 container-fluid'>
+      <img class='left-arrow' src="/assets/leftarrow.png">
+      <div class='row'>
+        <ul>
+          <li class='col-md-3'><a href=""><img src="/assets/iota.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/kappa.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/lambda.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/mu.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/nu.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/xi.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/omicron.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/pi.jpg"></a></li>
+        </ul>
+      </div>
+      <img class='right-arrow-2' src="/assets/rightarrow.png">
+    </div>
+    <div class='letters-list letters3 container-fluid'>
+      <img class='left-arrow-2' src="/assets/leftarrow.png">
+      <div class='row'>
+        <ul>
+          <li class='col-md-3'><a href=""><img src="/assets/rho.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/sigma.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/tau.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/upsilon.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/phi.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/chi.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/psi.jpg"></a></li>
+          <li class='col-md-3'><a href=""><img src="/assets/omega.jpg"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="slide3">
+    <div>
+      <div>
+        <h3><a href="<%= items_path %>">See Item Inventory</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="slide4">
+    <div>
+      <div>
+        <h3><a href="<%= new_item_path %>">Add New Item</a></h3>
+      </div>
+    </div>
+  </div>
+
+  <div id="slide5">
+    <div>
+      <div>
+        <h3><a href="<%= new_order_path %>">Add New Order</a></h3>
+      </div>
+    </div>
+  </div>

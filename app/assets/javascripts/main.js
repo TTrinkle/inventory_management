@@ -37,4 +37,38 @@ $(document).ready(function() {
       }
     }
   });
+  $('.top-header').click(function(){
+   console.log('hey there')
+   $('.top-letters').toggle(); 
+  });
+
+  $('.collapse').on('show.bs.collapse', function () {
+    console.log('hey');
+    $('.collapse.in').collapse('hide');
+  });
+  $('.bottom-header').on('click', function(){
+    $('.bottom-letters').toggle();
+  });
+  $('.new-letter-cta').on('click', function(){
+    $('#slide2-half').slideToggle();
+  })
+  $(function() {
+   $(".letters_list").mousewheel(function(event, delta) {
+    this.scrollLeft -= (delta * 30);
+    event.preventDefault();
+   });
+  });
+  $('.right-arrow').on('click', function(){
+    $('.letters1').addClass('animated bounceOutLeft');
+  });
+  $('.right-arrow-2').on('click', function(){
+    $('.letters2').removeClass('bounceInLeft').addClass('animated bounceOutLeft');
+  });
+  $('.left-arrow-2').on('click', function(){
+    $('.letters2').removeClass('bounceOutLeft').addClass('bounceInLeft');
+  });
+  $('.left-arrow').on('click', function(){
+    $('.letters1').removeClass('bounceOutLeft').addClass('bounceInLeft');
+  });
+
 });
