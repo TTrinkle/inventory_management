@@ -9,3 +9,27 @@
 .bottom-letters{
 	display: none;
 }
+
+#letter_inventory{
+	height: 100px;
+	width: 300px;
+	background-color: white;
+	opacity: 0.9;
+}
+
+.top-header, .bottom-header{
+	height: 300px;
+	width: 250px;
+	padding-top: 100px;
+	display: inline-block;
+	background-color: #230617;
+	opacity: 0.9;
+	margin-left: 60px;
+	color: #D9BFBF;
+	font-size: 40px;
+	text-align: center;
+	float: left;
+	&:hover{
+		cursor: pointer;
+	}
+}

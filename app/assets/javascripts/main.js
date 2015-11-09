@@ -47,6 +47,7 @@ $(document).ready(function() {
     $('.collapse.in').collapse('hide');
   });
   $('.bottom-header').on('click', function(){
+    console.log('clicked bottom');
     $('.bottom-letters').toggle();
   });
   $('.new-letter-cta').on('click', function(){
@@ -71,4 +72,6 @@ $(document).ready(function() {
     $('.letters1').removeClass('bounceOutLeft').addClass('bounceInLeft');
   });
 
+  TweenMax.to("#letter_inventory", 2, {x:100, ease:Bounce.easeOut});
+  TweenMax.staggerFrom("#letter_inventory", 1, {opacity:0, y:300, rotation:360, scale: 5, delay: 2}, 0.2)
 });
