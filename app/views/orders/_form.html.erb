@@ -11,10 +11,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :shirt_type %><br>
-    <%= f.collection_select(:shirt_type, Article::SHIRT_TYPES, :to_s, :to_s) %>
-  </div>
-  <div class="field">
     <%= f.label :shirt_size %><br>
     <%= f.collection_select(:shirt_size, Article::SHIRT_SIZES, :to_s, :to_s) %>
   </div>
@@ -53,6 +49,18 @@
   <div class="field">
     <%= f.label :shipping_spent %><br>
     <%= f.text_field :shipping_spent %>
+  </div>
+  <div class="field">
+    <%= f.label :order_code %><br>
+    <%= f.text_field :order_code %>
+  </div>
+  <div class="field">
+    <%= f.label :order_total %><br>
+    <%= f.text_field :order_total %>
+  </div>
+  <div class="field">
+    <%= f.label :quantity %><br>
+    <%= f.select :quantity, (1..100) %>
   </div>
 
   <div class="actions">

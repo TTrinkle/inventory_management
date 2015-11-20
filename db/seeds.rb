@@ -8,6 +8,40 @@
 
 # Front
 alpha = Letter.create(name: 'alpha' , position: 'top', color: 'black')
+alpha1 = Letter.create(name: 'alpha' , position: 'top', color: 'white')
+alpha2 = Letter.create(name: 'alpha' , position: 'top', color: 'shark_teal')
+alpha3 = Letter.create(name: 'alpha' , position: 'top', color: 'orange')
+alpha4 = Letter.create(name: 'alpha' , position: 'top', color: 'gold glitter')
+alpha5 = Letter.create(name: 'alpha' , position: 'top', color: 'silver glitter')
+alpha6 = Letter.create(name: 'alpha' , position: 'top', color: 'pink glitter')
+
+beta = Letter.create(name: 'beta' , position: 'top', color: 'black')
+beta1 = Letter.create(name: 'beta' , position: 'top', color: 'white')
+beta2 = Letter.create(name: 'beta' , position: 'top', color: 'shark_teal')
+beta3 = Letter.create(name: 'beta' , position: 'top', color: 'orange')
+beta4 = Letter.create(name: 'beta' , position: 'top', color: 'gold glitter')
+beta5 = Letter.create(name: 'beta' , position: 'top', color: 'silver glitter')
+beta6 = Letter.create(name: 'beta' , position: 'top', color: 'pink glitter')
+
+gamma = Letter.create(name: 'gamma' , position: 'top', color: 'black')
+gamma1 = Letter.create(name: 'gamma' , position: 'top', color: 'white')
+gamma2 = Letter.create(name: 'gamma' , position: 'top', color: 'shark_teal')
+gamma3 = Letter.create(name: 'gamma' , position: 'top', color: 'orange')
+gamma4 = Letter.create(name: 'gamma' , position: 'top', color: 'gold glitter')
+gamma5 = Letter.create(name: 'gamma' , position: 'top', color: 'silver glitter')
+gamma6 = Letter.create(name: 'gamma' , position: 'top', color: 'pink glitter')
+
+delta = Letter.create(name: 'delta' , position: 'top', color: 'black')
+delta1 = Letter.create(name: 'delta' , position: 'top', color: 'white')
+delta2 = Letter.create(name: 'delta' , position: 'top', color: 'shark_teal')
+delta3 = Letter.create(name: 'delta' , position: 'top', color: 'orange')
+delta4 = Letter.create(name: 'delta' , position: 'top', color: 'gold glitter')
+delta5 = Letter.create(name: 'delta' , position: 'top', color: 'silver glitter')
+delta6 = Letter.create(name: 'delta' , position: 'top', color: 'pink glitter')
+
+
+
+
 beta = Letter.create(name: 'beta' , position: 'top', color: 'gold glitter')
 gamma = Letter.create(name: 'gamma' , position: 'top', color: 'black')
 delta = Letter.create(name: 'delta', position: 'top', color: 'gold glitter')
@@ -19,7 +53,7 @@ iota = Letter.create(name: 'iota' , position: 'top', color: 'pink glitter')
 kappa = Letter.create(name: 'kappa' , position: 'bottom', color: 'white')
 lambda = Letter.create(name: 'lambda' , position: 'top', color: 'gold glitter')
 mu = Letter.create(name: 'mu' , position: 'top', color: 'white')
-nu = Letter.create(name: 'nu' , position: 'bottom', color: 'pink glitter')
+nu = Letter.create(name: 'nu' , position: 'top', color: 'pink glitter')
 xi = Letter.create(name: 'xi' , position: 'top', color: 'gold glitter')
 omicron = Letter.create(name: 'omicron' , position: 'top', color: 'black')
 pi = Letter.create(name: 'pi' , position: 'bottom', color: 'navy')
