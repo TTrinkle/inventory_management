@@ -78,7 +78,7 @@ class OrdersController < ApplicationController
     #   letter_6 = Letter.where(position: 'bottom', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
     # end
 
-    if Item.where(item_type: shirt_type, color: :shirt_color, size: size)
+    if Item.where(item_type: shirt_type, color: order_params[:shirt_color], size: size).count > 0
       item = Item.where(item_type: shirt_type, color: order_params[:shirt_color], size: size).first
       item.number -= order_params[:quantity].to_i
       item.save

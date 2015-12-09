@@ -30,11 +30,7 @@
 <nav class='navbar navbar-default'>
   <div class='container-fluid'>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href=' <%= letters_path %>'>Letters</a></li>
-        <li><a href=' <%= items_path %>'>Items</a></li>
-        <li><a href=' <%= orders_path %>'>Orders</a></li>
-      </ul>
+  
       <p class="navbar-text pull-right">
         <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
@@ -45,11 +41,7 @@
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
         <% end %>
       </p>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="<%= new_letter_path %>">Add Letter</a></li>
-        <li><a href="<%= new_item_path %>">Add Item</a></li>
-        <li><a href="<%= new_order_path %>">Add Order</a></li>
-      </ul>
+     
     </div>
   </div>
 </nav>
