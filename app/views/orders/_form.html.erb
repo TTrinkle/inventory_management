@@ -9,7 +9,10 @@
       </ul>
     </div>
   <% end %>
-
+  <div class="field">
+    <%= f.label :order_number %><br>
+    <%= f.text_field :order_number %>
+  </div>
   <div class="field">
     <%= f.label :shirt_size %><br>
     <%= f.collection_select(:shirt_size, Article::SHIRT_SIZES, :to_s, :to_s) %>
@@ -28,7 +31,7 @@
   </div>
   <div class="field">
     <%= f.label :letter_3 %><br>
-    <%= f.collection_select(:letter_3, Article::LETTER_OPTIONS, :to_s, :to_s) %>
+    <%= f.collection_select(:letter_3, Article::OPTIONAL_LETTER_OPTIONS, :to_s, :to_s) %>
   </div>
   <div class="field">
     <%= f.label :top_color %><br>

@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
-
+	belongs_to :order_number
+	
 	def letter_count
 	end
 

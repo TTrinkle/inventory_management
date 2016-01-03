@@ -1,14 +1,20 @@
-class ItemsController < ApplicationController
+class AccountsController < ApplicationController
 
   def index
-    @account = current_user.accounts
+    @account = current_user.account
   end
 
   def show
+    p 'HEYYYYYYY'
   end
 
   def new
   end
+
+  # def pay_mom
+  #   @account = current_user.account.update(mom_pay: 0)
+  #   @account.save
+  # end
 
   # GET /items/1/edit
   def edit
@@ -22,12 +28,20 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1
   # PATCH/PUT /items/1.json
   def update
+    p "THIS IS AN UPDATEEEE"
+    @account = current_user.account
+    @account.pay_mom
+    p @account
   end
 
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
    
+  end
+
+  def pay_mom
+    p "I'm in the pay mom method in the accounts controller"
   end
 
   private

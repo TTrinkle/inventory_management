@@ -59,15 +59,22 @@ class OrdersController < ApplicationController
     letter = @order_codes[code][:letter]
     count = @order_codes[code][:count]
     size = order_params[:shirt_size]
+    if order_params[:letter_3] != 'none'
+      letter_3 = order_params[:letter_3]
+    else
+      letter_3 = nil
+    end
+    number = OrderNumber.create!(number: order_params[:order_number])
     @order = Order.new(letter_1: order_params[:letter_1], 
-                      letter_2: order_params[:letter_2], 
-                      letter_3: order_params[:letter_3], 
-                      shirt_type: shirt_type, 
-                      shirt_size: order_params[:shirt_size], 
-                      shirt_color: order_params[:shirt_color], 
-                      top_color: order_params[:top_color], 
-                      bottom_color: order_params[:bottom_color], 
-                      user_id: current_user.id)
+                    letter_2: order_params[:letter_2], 
+                    letter_3: letter_3, 
+                    shirt_type: shirt_type, 
+                    shirt_size: order_params[:shirt_size], 
+                    shirt_color: order_params[:shirt_color], 
+                    top_color: order_params[:top_color], 
+                    bottom_color: order_params[:bottom_color], 
+                    user_id: current_user.id,
+                    order_number: number)
 
     # order_params[:quantity].to_i.times do |order|  
     #   letter_1 = Letter.where(position: 'top', name: order_params[:letter_1], color: order_params[:top_color]).first.remove_one
@@ -110,6 +117,20 @@ class OrdersController < ApplicationController
     end
   end
 
+  def update_mom_pay
+  end
+
+  def update_tanya_pay
+  end
+
+  def update_shop_money
+  end
+
+  def update_inventory_money
+  end
+
+  def update_etsy_bill 
+  end
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
@@ -142,6 +163,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:letter_1, :letter_2, :letter_3, :top_color, :bottom_color, :shirt_size, :shirt_type, :shirt_color, :order_code, :order_total, :paid_shipping, :shipping_spent, :quantity)
+      params.require(:order).permit(:letter_1, :letter_2, :letter_3, :top_color, :bottom_color, :shirt_size, :shirt_type, :shirt_color, :order_code, :order_total, :order_number, :paid_shipping, :shipping_spent, :quantity)
     end
 end

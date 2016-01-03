@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151117161757) do
+ActiveRecord::Schema.define(version: 20151211023454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,10 @@ ActiveRecord::Schema.define(version: 20151117161757) do
     t.string   "status"
   end
 
+  create_table "order_numbers", force: :cascade do |t|
+    t.integer "number"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.string   "letter_1"
     t.string   "letter_2"
@@ -57,10 +61,11 @@ ActiveRecord::Schema.define(version: 20151117161757) do
     t.string   "top_color"
     t.string   "bottom_color"
     t.string   "shirt_size"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.integer  "user_id"
     t.string   "shirt_color"
+    t.integer  "order_number_id"
   end
 
   create_table "users", force: :cascade do |t|

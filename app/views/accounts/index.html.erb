@@ -1,1 +1,18 @@
-@account.each 
+<%= @account %>
+
+Mom balance: 
+<%= @account.mom_pay %>
+<%= link_to "Pay Mom", controller: "accounts", action: "update", id: @account%>
+
+
+Tanya balance:
+<%= @account.tanya_pay %>
+
+Etsy Bill
+<%= @account.etsy_bill %>
+
+Shop Money
+<%= @account.shop_money %>
+
+Inventory Money
+<%= @account.inventory_money %>

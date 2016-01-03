@@ -28,6 +28,33 @@ class Article < ActiveRecord::Base
 		'psi',
 		'omega',
 	]
+	OPTIONAL_LETTER_OPTIONS = [
+		'none',
+		'alpha',
+		'beta',
+		'gamma',
+		'delta',
+		'epsilon',
+		'zeta',
+		'eta',
+		'theta',
+		'iota',
+		'kappa',
+		'lambda',
+		'mu',
+		'nu',
+		'xi',
+		'omicron',
+		'pi',
+		'rho',
+		'sigma',
+		'tau',
+		'upsilon',
+		'phi',
+		'chi',
+		'psi',
+		'omega',
+	]
 
 	POSITION_OPTIONS = ['top', 'bottom']
 end
