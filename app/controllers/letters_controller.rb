@@ -7,9 +7,10 @@ class LettersController < ApplicationController
     top_letters = Letter.where(position: 'top', user_id: current_user.id).order(:name, :number)
     bottom_letters = Letter.where(position: 'bottom', user_id: current_user.id).order(:name, :number)
     @letters = {top_letters: top_letters, bottom_letters: bottom_letters}
+    p @letters
 
-    tanya = User.new
-    tanya.order_breakdown('vneck', 25, 'glitter', 2)
+    # tanya = User.new
+    # tanya.order_breakdown('vneck', 25, 'glitter', 2)
   end
 
   # GET /letters/1
