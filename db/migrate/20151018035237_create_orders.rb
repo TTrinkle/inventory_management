@@ -8,7 +8,6 @@ class CreateOrders < ActiveRecord::Migration
     	t.string :top_color
     	t.string :bottom_color
     	t.string :shirt_size
-
       t.timestamps null: false
     end
   end
