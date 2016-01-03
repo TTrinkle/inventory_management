@@ -64,7 +64,7 @@ class OrdersController < ApplicationController
     else
       letter_3 = nil
     end
-    number = OrderNumber.create!(number: order_params[:order_number])
+    number = OrderNumber.create!(id: order_params[:order_number])
     @order = Order.new(letter_1: order_params[:letter_1], 
                     letter_2: order_params[:letter_2], 
                     letter_3: letter_3, 
