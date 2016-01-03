@@ -31,11 +31,10 @@ ActiveRecord::Schema.define(version: 20151211023454) do
     t.string   "item_type"
     t.string   "color"
     t.string   "size"
-    t.integer  "number",     default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.string   "status",     default: "available"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.integer  "user_id"
-    t.string   "status"
   end
 
   create_table "letters", force: :cascade do |t|
@@ -50,7 +49,6 @@ ActiveRecord::Schema.define(version: 20151211023454) do
   end
 
   create_table "order_numbers", force: :cascade do |t|
-    t.integer "number"
   end
 
   create_table "orders", force: :cascade do |t|

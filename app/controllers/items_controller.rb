@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.where(user_id: current_user.id)
+    @items = Item.where(user_id: current_user.id, status: 'available')
   end
 
   # GET /items/1
@@ -24,8 +24,9 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
-
+    item_params[:number].to_i.times do |x|
+      @item = Item.new(item_type: item_params[:item_type], color: item_params[:color], size: item_params[:size], user_id: current_user.id)
+    end
     respond_to do |format|
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
