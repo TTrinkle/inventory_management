@@ -26,28 +26,24 @@ class Order < ActiveRecord::Base
 	end
 
 
-	def order_breakdown shirt_type, letter_type, order_total, letter_count, quantity
+	def order_breakdown shirt_type, letter_type, order_total, letter_count, quantity, cost
 	  quantity = quantity.to_f   #3
 	  order_total = order_total.to_f #25
 	  inventory_money = 0  
 	  tanya_pay = 0
 	  shop_money = 0
 	  etsy_bill = 0
+	  clothing_cost = cost
 		case shirt_type
 	  	when 'tshirt'
-	  		clothing_cost = 3  #3
 	  		mom_cost = 8        #8
 	  	when 'vneck'
-	  		clothing_cost = 4
 	  		mom_cost = 8
 	  	when 'blanket'
-	  		clothing_cost = 10
 	  		mom_cost = 8
 	  	when 'sweatshirt', 'sweatpants'
-	  		clothing_cost = 10
 	  		mom_cost = 10
 	  	else
-	  		clothing_cost = 6
 	  		mom_cost = 8
 		end
 		etsy_fee = 0.20 + (order_total * quantity * 0.035) 

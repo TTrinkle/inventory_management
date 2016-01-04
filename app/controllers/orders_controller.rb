@@ -87,16 +87,18 @@ class OrdersController < ApplicationController
     order_params[:quantity].to_i.times do |x|
       if Item.where(item_type: shirt_type, color: order_params[:shirt_color], size: size).count > 0
         item = Item.where(item_type: shirt_type, color: order_params[:shirt_color], size: size).first
+        @cost = item.cost
         item.status = 'sold'
         item.save
       else
-        new_item = Item.create(item_type: shirt_type, color: order_params[:shirt_color], size: size, user_id: current_user.id)
+        new_item = Item.create(item_type: shirt_type, color: order_params[:shirt_color], size: size, user_id: current_user.id, cost: 3.88)
         new_item.status = 'sold'
         new_item.save
       end
     end
+    p @costs
     p order_params
-    cost_breakdown = @order.order_breakdown(shirt_type, letter, order_params[:order_total], count, order_params[:quantity])
+    cost_breakdown = @order.order_breakdown(shirt_type, letter, order_params[:order_total], count, order_params[:quantity], @cost)
     p cost_breakdown
     current_user.account.update(
       mom_pay: current_user.account.mom_pay += cost_breakdown[:mom_pay],

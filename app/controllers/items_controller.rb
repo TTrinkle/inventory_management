@@ -24,18 +24,21 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
+    p item_params[:number].to_i
     item_params[:number].to_i.times do |x|
-      @item = Item.new(item_type: item_params[:item_type], color: item_params[:color], size: item_params[:size], user_id: current_user.id)
+      item = Item.new(item_type: item_params[:item_type], color: item_params[:color], size: item_params[:size], cost: item_params[:cost], user_id: current_user.id)
+      item.save
     end
-    respond_to do |format|
-      if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @item }
-      else
-        format.html { render :new }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @item.save
+    #     format.html { redirect_to @item, notice: 'Item was successfully created.' }
+    #     format.json { render :show, status: :created, location: @item }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @item.errors, status: :unprocessable_entity }
+    #   end
+    # end
+    redirect_to :back
   end
 
   # PATCH/PUT /items/1
@@ -70,6 +73,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:item_type, :color, :size, :number)
+      params.require(:item).permit(:item_type, :color, :size, :number, :cost)
     end
 end
