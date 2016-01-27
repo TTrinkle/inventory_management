@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   root to: 'letters#welcome'
   # root to: "letters#index"
   post 'letters/:id' => 'letters#add_set'
+  get 'accounts/:id/pay_mom' => 'accounts#pay_mom'
+
+  
   get '*path', to: 'letters#welcome'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

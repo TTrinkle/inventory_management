@@ -1,8 +1,7 @@
-<%= @account %>
 
 Mom balance: 
 <%= @account.mom_pay %>
-<%= link_to "Pay Mom", controller: "accounts", action: "update", id: @account%>
+<%= link_to "Pay Mom", controller: "accounts", action: "pay_mom", id: @account%>
 
 
 Tanya balance:

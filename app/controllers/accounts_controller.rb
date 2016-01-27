@@ -41,7 +41,11 @@ class AccountsController < ApplicationController
   end
 
   def pay_mom
-    p "I'm in the pay mom method in the accounts controller"
+    acc = Account.find(params[:id])
+    p acc
+    acc.update(mom_pay: 0)
+    acc.save
+    acc
   end
 
   private

@@ -5,6 +5,8 @@ class Item < ActiveRecord::Base
 	scope :tshirt, -> {where(item_type: 'tshirt')}
 	scope :vneck, -> {where(item_type: 'vneck')}
 	scope :blanket, -> {where(item_type: 'blanket')}
+
+	belongs_to :user
 	def number
 	end
 end
