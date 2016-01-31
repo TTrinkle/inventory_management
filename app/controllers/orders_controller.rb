@@ -79,10 +79,12 @@ class OrdersController < ApplicationController
     order_params[:quantity].to_i.times do |order|  
       letter_1 = Letter.where(position: 'top', name: order_params[:letter_1], color: order_params[:top_color]).first.remove_one
       letter_2 = Letter.where(position: 'top', name: order_params[:letter_2], color: order_params[:top_color]).first.remove_one
-      letter_3 = Letter.where(position: 'top', name: order_params[:letter_3], color: order_params[:top_color]).first.remove_one
       letter_4 = Letter.where(position: 'bottom', name: order_params[:letter_1], color: order_params[:bottom_color]).first.remove_one
       letter_5 = Letter.where(position: 'bottom', name: order_params[:letter_2], color: order_params[:bottom_color]).first.remove_one
-      letter_6 = Letter.where(position: 'bottom', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
+      unless order_params[:letter_3] == 'none'
+        letter_3 = Letter.where(position: 'top', name: order_params[:letter_3], color: order_params[:top_color]).first.remove_one
+        letter_6 = Letter.where(position: 'bottom', name: order_params[:letter_3], color: order_params[:bottom_color]).first.remove_one
+      end
     end
     order_params[:quantity].to_i.times do |x|
       if Item.where(item_type: shirt_type, color: order_params[:shirt_color], size: size).count > 0
@@ -96,10 +98,7 @@ class OrdersController < ApplicationController
         new_item.save
       end
     end
-    p @costs
-    p order_params
     cost_breakdown = @order.order_breakdown(shirt_type, letter, order_params[:order_total], count, order_params[:quantity], @cost)
-    p cost_breakdown
     current_user.account.update(
       mom_pay: current_user.account.mom_pay += cost_breakdown[:mom_pay],
       tanya_pay: current_user.account.tanya_pay += cost_breakdown[:tanya_pay],

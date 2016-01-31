@@ -31,7 +31,7 @@ class LettersController < ApplicationController
   # POST /letters.json
   def create
     p letter_params
-    if Letter.where(color: letter_params[:color], position: letter_params[:position], name: letter_params[:name]).length > 0 
+    if Letter.where(color: letter_params[:color], position: letter_params[:position], name: letter_params[:name], user_id: current_user.id).length > 0 
       respond_to do |format|
         format.html { redirect_to letters_url, alert: 'Letter already exists.' }
         format.json { head :no_content }

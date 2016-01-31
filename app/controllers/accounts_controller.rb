@@ -5,7 +5,6 @@ class AccountsController < ApplicationController
   end
 
   def show
-    p 'HEYYYYYYY'
   end
 
   def new
@@ -42,7 +41,7 @@ class AccountsController < ApplicationController
 
   def pay_mom
     acc = Account.find(params[:id])
-    p acc
+    transaction = Transaction.create(account_id: acc.id, type: "Pay Out to Mom", amount: acc.mom_pay)
     acc.update(mom_pay: 0)
     acc.save
     acc
