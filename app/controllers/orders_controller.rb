@@ -95,6 +95,7 @@ class OrdersController < ApplicationController
       else
         new_item = Item.create(item_type: shirt_type, color: order_params[:shirt_color], size: size, user_id: current_user.id, cost: 3.88)
         new_item.status = 'sold'
+        @cost = item.cost
         new_item.save
       end
     end
